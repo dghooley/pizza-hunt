@@ -16,7 +16,7 @@ const ReplySchema = new Schema(
         },
         createdAt: {
             type: Date,
-            defualt: Date.now,
+            default: Date.now,
             get: createdAtVal => dateFormat(createdAtVal)
         }
     },
@@ -52,7 +52,7 @@ const CommentSchema = new Schema(
     }
 );
 
-CommentSchema.virtual('replyCount').get(function() {
+CommentSchema.virtual('replyCount').get(function () {
     return this.replies.length;
 });
 

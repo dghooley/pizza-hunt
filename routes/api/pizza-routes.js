@@ -7,14 +7,12 @@ const {
     deletePizza
 } = require('../../controllers/pizza-controller');
 
-// set up GET all and POST all at /api/pizzas
 // /api/pizzas
 router
     .route('/')
     .get(getAllPizza)
     .post(createPizza);
 
-// set up GET one, PUT, and DELETE at /api/pizzas/:id
 // /api/pizzas/:id
 router
     .route('/:id')
